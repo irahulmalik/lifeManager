@@ -1,0 +1,26 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class="sidenav"mode="side"opened>
+      <mat-list>
+        <h1 class="myheading" mat-item-list><mat-icon (click)="showTodosList= !showTodosList">keyboard_arrow_right</mat-icon><a routerLink="todo">ToDos</a></h1>
+        <div class="mylist" *ngIf="showTodosList">
+          <mat-list-item >My todo1</mat-list-item>
+        </div>
+        <h1 class="myheading" mat-item-list><mat-icon (click)="showNotesList= !showNotesList">keyboard_arrow_right</mat-icon><a routerLink="notes">Notes</a></h1>
+        <div class="mylist" *ngIf="showNotesList">
+          <mat-list-item>Notes1</mat-list-item>
+        </div>
+        <h1 class="myheading" mat-list-item><mat-icon (click)="showPlannerList= !showPlannerList">keyboard_arrow_right</mat-icon><a routerLink="planner">Planner</a></h1>
+        <div class="mylist" *ngIf="showPlannerList">
+          <mat-list-item>My planner</mat-list-item>
+        </div>
+        <h1 class="myheading" mat-list-item><mat-icon (click)="showGoalsList = !showGoalsList">keyboard_arrow_right</mat-icon><a routerLink="goals">Goals</a></h1>
+        <div class="mylist" *ngIf="showGoalsList">
+          <mat-list-item>My Goals</mat-list-item>
+        </div>
+       </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <!-- <app-todo></app-todo> -->
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>

@@ -1,0 +1,47 @@
+.example-container{
+  height: 100%;
+  width: 100%;
+}
+.sidenav {
+    display: flex;
+    max-width: 300px;
+    width: 21%;
+    min-width: 200px;
+  height: 100%;
+  align-items: center;
+  justify-content: center
+}
+
+.mylist{
+  padding-left: 38px;
+  /* display: none; */
+
+}
+.example-container a{
+  margin: 0;
+  font-size: large;
+  text-decoration: none;
+  color: rgb(187, 187, 187);
+  transition: all 0.3s ease-out;
+  transform: rotate(0);
+}
+h1{
+  color: rgb(187, 187, 187);
+}
+.example-container a:hover{
+  color: white;
+
+}
+mat-icon{
+  vertical-align: middle;
+}
+mat-icon:active{
+  transform: rotate(90deg);
+}
+.myheading{
+  padding: 0 16px;
+}
+
+mat-drawer-content{
+  height: inherit;
+}

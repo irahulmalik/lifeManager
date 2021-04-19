@@ -1,0 +1,48 @@
+.container{
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+}
+.headings {
+    display: flex;
+    padding: 20px 30px;
+    justify-content: space-between;
+}
+.headings h1{
+    
+    text-decoration: underline;
+    color: rgb(187, 187, 187);
+    
+}
+.headings button{
+    height: 40px;
+    background-color: #303030;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    /* outline: 1px solid #bbbbbb; */
+    color: #bbbbbb;
+    padding: 2px 5px ;
+}
+#myicon{
+    vertical-align: middle;
+}
+.notesarea{
+    margin: 0;
+    padding: 0 30px;
+}
+.myaddnote{
+    /* transition: all 0.3 ease-out; */
+    color:#fff;
+    background-color: burlywood;
+    font-size:large;
+}
+.myaddnote:hover{
+    color:white;
+}
+button{
+    color:#fff;
+    background-color: burlywood;
+}
+button:hover{
+    color:burlywood;
+}

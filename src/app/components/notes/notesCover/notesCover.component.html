@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="headings">
+                <h1 class="mat-display-2" id="mynotes">My Notes
+                </h1>
+                <button class="myaddnote" role="link" routerLink="/addnote">
+                    <mat-icon id="myicon">add</mat-icon>
+                    Add Note
+                </button>
+            </div>
+            <div class="notesarea">
+                <div class="shownotes" *ngIf="notesExists">
+                    <!-- <p>hey there</p> -->
+                    <div class="notes" *ngFor="let note of mynotes; let i = index">
+                        <a routerLink="/addnote" ><h3>{{i+1}}. {{mynotes[i].notes[0].title}}</h3></a>
+                        <br>
+                    </div>
+                </div>
+                <div class="nonotes"*ngIf="!notesExists">
+                    <h2>You dont have any notes click on add Note to add note</h2>
+                    <!-- <a routerLink="./addnote">Add note</a> -->
+                    <p role="link" routerLink="/addnote">Add Note</p>
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

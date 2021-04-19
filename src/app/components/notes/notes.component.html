@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-md-12 col-xs-12">
+            <form [formGroup]="noteForm">
+              <div class="heading-container">
+                  <h2>My Note</h2><hr>
+                  <small class="note">* Notes are automatically saved every second</small>
+              </div>
+                <mat-form-field class="mytitle">
+                    <mat-label>Title</mat-label>
+                    <input matInput class="mytitlen" autofocus="autofocus" placeholder="" [(ngModel)]="title" formControlName="title" autocomplete="off">
+                  </mat-form-field>
+                <mat-form-field class="mysubject">
+                    <mat-label>Subject</mat-label>
+                    <input matInput class="mysubject"placeholder="Enter Suject" formControlName="subject" [(ngModel)]="subject">
+                  </mat-form-field>
+                <mat-form-field class="myarea">
+                    <mat-label>Body</mat-label>
+                    <textarea matInput cdkTextareaAutosize
+                    #autosize="cdkTextareaAutosize"
+                    cdkAutosizeMinRows="5"
+                    cdkAutosizeMaxRows="10"
+                    formControlName="body"
+                    placeholder="Enter Text" [(ngModel)]="body"></textarea>
+                  </mat-form-field>
+                  <button mat-raised-button color="link" class="saveButton" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
